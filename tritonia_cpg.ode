@@ -1,0 +1,112 @@
+# ====================================================
+# Tritonia Swim CPG
+# Reduced from Getting (1989)
+#
+# D  = DSI activity
+# C  = C2 activity
+# V  = VSI activity
+#
+# TD,TC,TV = adaptive thresholds
+# SD,SC,SV = synaptic traces
+#
+# ====================================================
+
+# ---------- Time scales ----------
+
+par tauD=1
+par tauC=1
+par tauV=1
+
+par tauTD=12
+par tauTC=12
+par tauTV=12
+
+par tauSD=8
+par tauSC=8
+par tauSV=15
+
+# ---------- Threshold adaptation ----------
+
+par aD=2.5
+par aC=2.0
+par aV=1.5
+
+# ---------- Network weights ----------
+
+par wDD=1.5
+par wCD=1.0
+par wVD=2.5
+
+par wDC=2.5
+par wVC=2.0
+
+par wDV=0.5
+par wCV=2.0
+par wVV=0.5
+
+# ---------- Input ----------
+
+par I=1
+
+# ---------- Sigmoid ----------
+
+par k=8
+
+# ====================================================
+# Activity variables
+# ====================================================
+
+D' = (-D + 1/(1+exp(-k*( wDD*SD + wCD*SC - wVD*SV - TD + I ))))/tauD
+
+C' = (-C + 1/(1+exp(-k*( wDC*SD - wVC*SV - TC ))))/tauC
+
+V' = (-V + 1/(1+exp(-k*( wDV*SD + wCV*SC - wVV*SV - TV ))))/tauV
+
+# ====================================================
+# Adaptive thresholds
+# ====================================================
+
+TD' = (-TD + aD*D)/tauTD
+
+TC' = (-TC + aC*C)/tauTC
+
+TV' = (-TV + aV*V)/tauTV
+
+# ====================================================
+# Synaptic traces
+# ====================================================
+
+SD' = (-SD + D)/tauSD
+
+SC' = (-SC + C)/tauSC
+
+SV' = (-SV + V)/tauSV
+
+# ====================================================
+# Initial conditions
+# ====================================================
+
+init D=0
+init C=0
+init V=0
+
+init TD=0
+init TC=0
+init TV=0
+
+init SD=0
+init SC=0
+init SV=0
+
+# ====================================================
+# XPP settings
+# ====================================================
+
+@ total=10000
+@ dt=0.05
+@ xlo=0
+@ xhi=100
+@ ylo=-0.1
+@ yhi=1.2
+
+done
