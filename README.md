@@ -1,4 +1,4 @@
-This repository was created by me as part of the project titled, "How robust is the Swim CPG of Tritonia?" created and presented at CAMP (Computational Approaches To Memory and Plasticity) 2026, IISER Pune by a team consisting of: 
+This repository was created by me as part of the project titled, "How robust is the Swim CPG of Tritonia?" created and presented at Computational Approaches To Memory and Plasticity (CAMP) 2026, IISER Pune by a team consisting of: 
 Darshan R (Krea University)
 Shraddha Pathak (TIFR-NCBS) 
 Srujana Kaluve (IISER Mohali)
