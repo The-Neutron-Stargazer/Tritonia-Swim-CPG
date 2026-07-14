@@ -1,9 +1,9 @@
 This repository was created by me as part of the project titled, "How robust is the Swim CPG of Tritonia?" created and presented at Computational Approaches To Memory and Plasticity (CAMP) 2026, IISER Pune by a team consisting of: 
-Darshan R (Krea University)
-Shraddha Pathak (TIFR-NCBS) 
-Srujana Kaluve (IISER Mohali)
-Rittika Dutta (IISER Behrampur)
-Sakshi Jethva (IIT Delhi)
+- Darshan R (Krea University): Modelling (Brian2 & XPPAUT)
+- Shraddha Pathak (TIFR-NCBS): Conceptualization, Literature Review, Modelling Results
+- Srujana Kaluve (IISER Mohali/ICTS): Modelling Results
+- Rittika Dutta (IISER Behrampur): Literature Review
+- Sakshi Jethva (IIT Delhi): Literature Review
 
 The repository consists of the follow files (and a brief description):
 - Tritonia_Swim_CPG_Network_main.ipynb : Main notebook file where we replicate a 3-cell swim CPG
